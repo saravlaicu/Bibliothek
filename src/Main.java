@@ -27,6 +27,7 @@ public class Main{
 
         biblio1.preisUberprufen(Bucher, 100);
         biblio1.teuersteBuchFinden(Bucher);
+        biblio1.seitenAnzahlUberprufen(Bucher,300);
 
     }
 }

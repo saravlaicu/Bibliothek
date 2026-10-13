@@ -72,5 +72,15 @@ public class Bibliothek {
             System.out.println("null");
         }
     }
-    
+
+    public void seitenAnzahlUberprufen(ArrayList<Buch> bucher, int mindenstensSeitenAnzahl){
+        for (Buch buch : bucher){
+            if(buch.Anzahl_Seiten >= mindenstensSeitenAnzahl){
+                System.out.println(buch.Tietel);
+            }
+        }
+        // System.out.println("Kein Buch unter "+maximalPreis+" Euro");
+    }
+
+
 }
