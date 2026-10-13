@@ -26,5 +26,7 @@ public class Main{
         System.out.println(biblio1.durchschnittRechnen(biblio1.Bucher) +"\n");
 
         biblio1.preisUberprufen(Bucher, 100);
+        biblio1.teuersteBuchFinden(Bucher);
+
     }
 }

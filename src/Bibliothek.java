@@ -51,9 +51,26 @@ public class Bibliothek {
                System.out.println(buch.Tietel);
            }
         }
-
         // System.out.println("Kein Buch unter "+maximalPreis+" Euro");
     }
 
+    public void teuersteBuchFinden(ArrayList<Buch> bucher) {
+        double maximalPreis = 0;
+        for (Buch buch : bucher) {
+            if (buch.Preis > maximalPreis) {
+                maximalPreis = buch.Preis;
+            }
+        }
+        if (maximalPreis != 0) {
+            for (Buch buch : bucher) {
+                if (buch.Preis == maximalPreis) {
+                    System.out.println(buch.Tietel + "(" + maximalPreis + ")"); //si in caz ca am mai multe carti cu acelasi pret
+                }
+            }
+        }
+        else {
+            System.out.println("null");
+        }
+    }
     
 }
