@@ -54,6 +54,5 @@ public class Bibliothek {
        // System.out.println("Kein Buch unter "+maximalPreis+" Euro");
     }
 
-
     
 }
