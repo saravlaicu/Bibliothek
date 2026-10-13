@@ -23,6 +23,7 @@ public class Main{
 
         biblio1.filternNachAuthor("George Orwell");
 
+        System.out.println(biblio1.durchschnittRechnen(biblio1.Bucher));
 
 
     }

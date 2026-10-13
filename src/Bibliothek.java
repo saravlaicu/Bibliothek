@@ -7,7 +7,7 @@ public class Bibliothek {
     public Bibliothek(ArrayList<Buch> Bucher ){
         this.Bucher=Bucher;
     }
-
+    //1.
 
     public void filternNachAuthor(String Author){
        // ArrayList<Buch> filtrierteBucher = new ArrayList<Buch>();
@@ -34,5 +34,19 @@ public class Bibliothek {
             System.out.println(buch.Tietel+", "+buch.Author+", "+ buch.Preis+" Euro ,"+ buch.Anzahl_Seiten+" Seiten\n");
         }
     }
+
+
+    //2
+    public double durchschnittRechnen(ArrayList<Buch> bucher){
+        double sum=0;
+        for (Buch buch : this.Bucher){
+            sum +=buch.Anzahl_Seiten;
+        }
+        return sum/bucher.size();
+
+    }
+
+
+
 
 }
