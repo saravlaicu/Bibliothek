@@ -16,7 +16,6 @@ public class Bibliothek {
                 //filtrierteBucher.add(buch);
                 System.out.println(buch.Tietel);
             }
-            //System.out.println("No book from this author \n");
         }
 
     }
@@ -46,7 +45,15 @@ public class Bibliothek {
 
     }
 
+    public void preisUberprufen(ArrayList<Buch> bucher, double maximalPreis){
+        for (Buch buch : bucher){
+           if(buch.Preis <= maximalPreis){
+               System.out.println(buch.Tietel);
+           }
+        }
+       // System.out.println("Kein Buch unter "+maximalPreis+" Euro");
+    }
 
 
-
+    
 }

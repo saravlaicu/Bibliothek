@@ -23,8 +23,8 @@ public class Main{
 
         biblio1.filternNachAuthor("George Orwell");
 
-        System.out.println(biblio1.durchschnittRechnen(biblio1.Bucher));
+        System.out.println(biblio1.durchschnittRechnen(biblio1.Bucher) +"\n");
 
-
+        biblio1.preisUberprufen(Bucher, 100);
     }
 }
