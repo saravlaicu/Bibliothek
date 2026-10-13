@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+
+public class Bibliothek {
+    public ArrayList<Buch> Bucher;
+
+
+    public Bibliothek(ArrayList<Buch> Bucher ){
+        this.Bucher=Bucher;
+    }
+
+
+    public void filternNachAuthor(String Author){
+       // ArrayList<Buch> filtrierteBucher = new ArrayList<Buch>();
+        for(Buch buch : Bucher){
+            if (buch.Author == Author){
+                //filtrierteBucher.add(buch);
+                System.out.println(buch.Tietel);
+            }
+            //System.out.println("No book from this author \n");
+        }
+
+    }
+
+
+    public void  printBucher(ArrayList<Buch> bucher){
+        for (Buch buch : bucher){
+            System.out.println(buch.Tietel+", "+buch.Author+", "+ buch.Preis+" Euro ,"+ buch.Anzahl_Seiten+" Seiten\n");
+        }
+    }
+
+    //daca vreau doarp+ pt cartiile biblioitecii mele:
+    public void  printBucher(){
+        for (Buch buch : this.Bucher){
+            System.out.println(buch.Tietel+", "+buch.Author+", "+ buch.Preis+" Euro ,"+ buch.Anzahl_Seiten+" Seiten\n");
+        }
+    }
+
+}
