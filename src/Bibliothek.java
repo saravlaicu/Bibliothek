@@ -82,5 +82,19 @@ public class Bibliothek {
         // System.out.println("Kein Buch unter "+maximalPreis+" Euro");
     }
 
-
+    public void inBudgetFinden(ArrayList<Buch> bucher, double budget){
+        double max=0;
+        for( int i=0; i<bucher.size();i++){
+            for(int j=1; j<bucher.size();j++){
+                if(bucher.get(i).Tietel != bucher.get(j).Tietel){
+                    if(bucher.get(i).Preis+bucher.get(j).Preis <=budget
+                            && bucher.get(i).Preis+bucher.get(j).Preis > max ){
+                        max=bucher.get(i).Preis+bucher.get(j).Preis;
+                        System.out.println(bucher.get(i).Tietel+" + "+bucher.get(j).Tietel+"\n"+"Gesamtpreis: "+max);
+                    }
+                    j++;
+                }
+            }
+        }
+    }
 }
