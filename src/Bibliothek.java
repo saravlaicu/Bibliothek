@@ -9,19 +9,20 @@ public class Bibliothek {
     }
     //1.
 
-    public void filternNachAuthor(String Author){
-       // ArrayList<Buch> filtrierteBucher = new ArrayList<Buch>();
+    public ArrayList<Buch> filternNachAuthor(String Author){
+       ArrayList<Buch> filtrierteBucher = new ArrayList<Buch>();
         for(Buch buch : Bucher){
             if (buch.Author == Author){
-                //filtrierteBucher.add(buch);
-                System.out.println(buch.Tietel);
+                filtrierteBucher.add(buch);
+                // System.out.println(buch.Tietel);
             }
         }
+        return filtrierteBucher;
 
     }
 
 
-    public void  printBucher(ArrayList<Buch> bucher){
+    public static void  printBucher(ArrayList<Buch> bucher){
         for (Buch buch : bucher){
             System.out.println(buch.Tietel+", "+buch.Author+", "+ buch.Preis+" Euro ,"+ buch.Anzahl_Seiten+" Seiten\n");
         }
@@ -45,42 +46,47 @@ public class Bibliothek {
 
     }
 
-    public void preisUberprufen(ArrayList<Buch> bucher, double maximalPreis){
-        for (Buch buch : bucher){
-           if(buch.Preis <= maximalPreis){
-               System.out.println(buch.Tietel);
-           }
+    public ArrayList<Buch> preisUberprufen(ArrayList<Buch> bucher, double maximalPreis) {
+        ArrayList<Buch> filtrierteBucher = new ArrayList<Buch>();
+        for (Buch buch : bucher) {
+            if (buch.Preis <= maximalPreis) {
+                filtrierteBucher.add(buch);
+                //  System.out.println(buch.Tietel);
+            }
         }
-        // System.out.println("Kein Buch unter "+maximalPreis+" Euro");
+        return filtrierteBucher;
     }
 
-    public void teuersteBuchFinden(ArrayList<Buch> bucher) {
+    public ArrayList<Buch> teuersteBuchFinden(ArrayList<Buch> bucher) {
         double maximalPreis = 0;
+        ArrayList<Buch> filtrierteBucher= new ArrayList<Buch>();
         for (Buch buch : bucher) {
             if (buch.Preis > maximalPreis) {
                 maximalPreis = buch.Preis;
             }
         }
-        if (maximalPreis != 0) {
-            for (Buch buch : bucher) {
-                if (buch.Preis == maximalPreis) {
-                    System.out.println(buch.Tietel + "(" + maximalPreis + ")"); //si in caz ca am mai multe carti cu acelasi pret
+        for (Buch buch : bucher) {
+            if (buch.Preis == maximalPreis) {
+                //System.out.println(buch.Tietel + "(" + maximalPreis + ")"); //si in caz ca am mai multe carti cu acelasi pret
+                filtrierteBucher.add(buch);
                 }
-            }
         }
-        else {
-            System.out.println("null");
-        }
+
+        return filtrierteBucher;
     }
 
-    public void seitenAnzahlUberprufen(ArrayList<Buch> bucher, int mindenstensSeitenAnzahl){
+    public ArrayList<Buch> seitenAnzahlUberprufen(ArrayList<Buch> bucher, int mindenstensSeitenAnzahl){
+        ArrayList<Buch> filtrierteBucher= new ArrayList<Buch>();
         for (Buch buch : bucher){
             if(buch.Anzahl_Seiten >= mindenstensSeitenAnzahl){
-                System.out.println(buch.Tietel);
+                filtrierteBucher.add(buch);
             }
         }
+        return filtrierteBucher;
         // System.out.println("Kein Buch unter "+maximalPreis+" Euro");
     }
+
+
 
     public void inBudgetFinden(ArrayList<Buch> bucher, double budget){
         double max=0;

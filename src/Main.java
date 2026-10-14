@@ -21,13 +21,13 @@ public class Main{
        // biblio1.printBucher(biblio1.Bucher);
         biblio1.printBucher();
 
-        biblio1.filternNachAuthor("George Orwell");
+        Bibliothek.printBucher(biblio1.filternNachAuthor("George Orwell"));
 
         System.out.println(biblio1.durchschnittRechnen(biblio1.Bucher) +"\n");
 
-        biblio1.preisUberprufen(Bucher, 100);
-        biblio1.teuersteBuchFinden(Bucher);
-        biblio1.seitenAnzahlUberprufen(Bucher,300);
+        Bibliothek.printBucher(biblio1.preisUberprufen(Bucher, 100));
+        Bibliothek.printBucher(biblio1.teuersteBuchFinden(Bucher));
+        Bibliothek.printBucher(biblio1.seitenAnzahlUberprufen(Bucher,300));
         biblio1.inBudgetFinden(Bucher,50);
     }
 }
