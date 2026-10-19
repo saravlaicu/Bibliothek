@@ -12,7 +12,7 @@ public class Bibliothek {
     public ArrayList<Buch> filternNachAuthor(String Author) {
         ArrayList<Buch> filtrierteBucher = new ArrayList<Buch>();
         for (Buch buch : Bucher) {
-            if (buch.Author == Author) {
+            if (buch.Author.equals(Author)) {
                 filtrierteBucher.add(buch);
                 // System.out.println(buch.Tietel);
             }
@@ -130,6 +130,7 @@ public class Bibliothek {
 
                 finalResult.add(pairs.get(i));
                 finalResult.add(pairs.get(i + 1));
+                break;
 
             }
 

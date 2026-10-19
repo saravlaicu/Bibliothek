@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main{
 
@@ -21,7 +22,7 @@ public class Main{
         biblio1.printBucher(biblio1.Bucher);
         biblio1.printBucher();
 
-        Bibliothek.printBucher(biblio1.filternNachAuthor("George Orwell"));
+        Bibliothek.printBucher(biblio1.filternNachAuthor("Robert Martin"));
 
         System.out.println(biblio1.durchschnittRechnen(biblio1.Bucher) +"\n");
 
@@ -29,5 +30,29 @@ public class Main{
         Bibliothek.printBucher(biblio1.teuersteBuchFinden(Bucher));
         Bibliothek.printBucher(biblio1.seitenAnzahlUberprufen(Bucher,300));
         Bibliothek.printBucher(biblio1.inBudgetFinden(Bucher,50));
+
+
+//        Scanner scanner= new Scanner(System.in);
+//        System.out.println("Intrduce author: ");
+//        String Author= scanner.nextLine();
+//        //System.out.println(Author);
+//        Bibliothek.printBucher(biblio1.filternNachAuthor(Author));
+//
+//
+//        System.out.println("Intrduce Price: ");
+//        double Preis= scanner.nextDouble();
+//        Bibliothek.printBucher(biblio1.preisUberprufen(Bucher, Preis));
+//
+//        System.out.println("Intrduce Number of pages: ");
+//        int SeitenAnzahl= scanner.nextInt();
+//        Bibliothek.printBucher(biblio1.seitenAnzahlUberprufen(Bucher,SeitenAnzahl));
+//
+//
+//        System.out.println("Intrduce Budget: ");
+//        double Budget= scanner.nextDouble();
+//        Bibliothek.printBucher(biblio1.inBudgetFinden(Bucher,Budget));
+
+
+
     }
 }
